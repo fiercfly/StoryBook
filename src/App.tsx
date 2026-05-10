@@ -24,7 +24,7 @@ const DashboardContent = () => (
 			<p className='text-gray-500 italic'>Try clicking the button below to see the Atoms in action.</p>
 			<div className='flex gap-4'>
 				<Button onClick={() => alert('Component Library is Live!')}>Explore Atoms</Button>
-				<Button variant='outline' onClick={() => (window.location.href = 'http://localhost:6006')}>
+				<Button variant='outline' onClick={() => (window.open(window.location.hostname === 'localhost' ? 'http://localhost:6006' : '/storybook', '_blank'))}>
 					Open Storybook
 				</Button>
 			</div>
@@ -51,7 +51,7 @@ const PlaceholderContent = () => {
 			</section>
 			<section className='bg-white p-8 border rounded-xl shadow-sm border-dashed text-center space-y-4'>
 				<p className='text-muted-foreground'>Component library extracted successfully.</p>
-				<Button onClick={() => (window.location.href = 'http://localhost:6006')}>View in Storybook</Button>
+				<Button onClick={() => (window.open(window.location.hostname === 'localhost' ? 'http://localhost:6006' : '/storybook', '_blank'))}>View in Storybook</Button>
 			</section>
 		</div>
 	);
